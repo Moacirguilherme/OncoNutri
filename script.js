@@ -1,4 +1,4 @@
-<script>
+document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.slide');
   const prev = document.querySelector('.prev');
   const next = document.querySelector('.next');
@@ -7,8 +7,8 @@
   function mostrarSlide(i) {
     slides.forEach((slide, j) => {
       slide.classList.remove('ativo');
-      if (j === i) slide.classList.add('ativo');
     });
+    slides[i].classList.add('ativo');
   }
 
   prev.addEventListener('click', () => {
@@ -21,6 +21,5 @@
     mostrarSlide(index);
   });
 
-  // Iniciar com o primeiro slide
   mostrarSlide(index);
-</script>
+});

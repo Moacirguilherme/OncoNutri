@@ -327,19 +327,31 @@ ul {
     overflow: hidden;
     max-width: 900px;
     margin: 0 auto;
+    height: auto;
   }
   
   .slide {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    pointer-events: none; /* impede clique no slide oculto */
   }
   
   .slide.ativo {
-    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: all;
   }
-  
+
   .comentario {
     background-color: #ffffff;
     padding: 1.5rem;
