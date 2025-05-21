@@ -14,6 +14,11 @@ html, body {
   background-color: #f8f8f8;
   color: #333;
   line-height: 1.6;
+  background-image: url('assets/fundopagina.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   }
 
   
@@ -74,6 +79,7 @@ html, body {
   }
 
 
+
   /* Hero */
   .hero {
     display: flex;
@@ -92,11 +98,13 @@ html, body {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #2e7d32;
+    text-align: center;
   }
   
   .hero-texto p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .btn {
@@ -106,6 +114,7 @@ html, body {
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+    
   }
   
   .btn:hover {
@@ -128,10 +137,16 @@ html, body {
   }
   
   .hero-img img {
+    width: 550px;
+    height: 310px;
     max-width: 100%;
     border-radius: 1rem;
   }
-
+  .hero-texto .btn {
+    display: block;
+    width: max-content;
+    margin: 1rem auto 0 auto; /* 1rem de margem em cima, centralizado horizontalmente */
+  }
   
 /* clinica */
 
@@ -146,6 +161,7 @@ html, body {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: justify;
 }
 
 .box {
@@ -187,8 +203,14 @@ ul {
   border-radius: 8px;
   text-align: center;
   font-style: italic;
-}
+  max-width: 800px; /* controla a largura máxima */
+  margin: 2rem auto; /* centraliza horizontalmente */
+  }
 
+
+.box p {
+  text-align: justify;
+}
 .quote-box cite {
   display: block;
   margin-top: 15px;
@@ -215,28 +237,6 @@ ul {
     margin: 0 auto 15px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   /* Sobre */
@@ -268,11 +268,12 @@ ul {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
+    text-align: justify;
   }
   
   /* Serviços */
   .servicos {
-    background-color: #f1f8e9;
+    /*background-color: #f1f8e9;*/
     padding: 4rem 0;
   }
   
@@ -314,7 +315,7 @@ ul {
   .depoimentos {
     padding: 4rem 0;
     text-align: center;
-    background-color: #e0f2f1;
+   /* background-color: #e0f2f1;*/
   }
   
   .depoimentos h2 {
@@ -353,7 +354,7 @@ ul {
   }
 
   .comentario {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
