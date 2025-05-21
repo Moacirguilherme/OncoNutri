@@ -14,7 +14,7 @@ html, body {
   background-color: #f8f8f8;
   color: #333;
   line-height: 1.6;
-  background-image: url('assets/fundopagina.jpg');
+  background-image: url('assets/fundopagina2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -30,7 +30,7 @@ html, body {
   
   /* Header */
   .header {
-    background-color: #f5f9f5; /* cor de fundo suave (opcional) */
+    /*background-color: #f5f9f5;*/ /* cor de fundo suave (opcional) */
     padding: 20px 40px;
   }
   
