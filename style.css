@@ -217,6 +217,7 @@ body {
 .img-nutri {
   width: 100%;
   max-width: 300px;
+  height: 250px;
   border-radius: 10px;
   display: block;
   margin-bottom: 15px;
