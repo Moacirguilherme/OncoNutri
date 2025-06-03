@@ -116,6 +116,43 @@ body {
   text-align: justify;
 }
 
+.whatsapp-btn {
+  margin-top: 25px;
+  display: inline-block;
+  background-color: #1f3c44; /* azul escuro */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #29545e; /* cor mais escura */
+  transform: scale(1.06);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* sombra mais forte no hover */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
 
 /* Missao */
 /* Hero */
@@ -337,7 +374,7 @@ ul {
 .depoimentos {
   padding: 4rem 0;
   text-align: center;
-  /* background-color: #e0f2f1;*/
+  background: linear-gradient(to bottom, #D4E6B5, #F5E5B8, #F9D976);
 }
 
 .depoimentos h2 {

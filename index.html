@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="./assets/logonutri.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+
 
 <body>
 
@@ -55,8 +55,14 @@
           promover bem-estar por meio da alimentação equilibrada e estratégica.
           <br>A nutrição pode ser uma grande aliada na sua jornada.
         </p>
+        <div class="btn-container">
+          <a href="https://wa.me/5542988694890" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Agende seu atendimento
+          </a>
+        </div>
       </div>
-    </div>
+      </div>
+    
   </section>
 
   <!-- MISSAO -->
@@ -229,9 +235,12 @@
     <div class="container">
       <h2>Entre em contato</h2>
       <form>
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu email" required>
+        <input type="text" placeholder="Seu Nome" required>
+        <input type="tel" id="telefone" placeholder="Seu Telefone" required pattern="[0-9]{10,11}">
+        <input type="email" placeholder="Seu E-mail" required>
+  
         <textarea placeholder="Mensagem" required></textarea>
+        
         <button type="submit">Enviar</button>
       </form>
     </div>

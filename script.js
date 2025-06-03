@@ -23,3 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   mostrarSlide(index);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const inputTelefone = document.getElementById("telefone");
+
+  inputTelefone.addEventListener("input", () => {
+    inputTelefone.value = inputTelefone.value.replace(/[^0-9]/g, "");
+  });
+});
