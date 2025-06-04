@@ -22,14 +22,13 @@ body {
   background-attachment: fixed;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
+/* HEADER */
 .header {
   background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
   /* cor de fundo suave (opcional) */
@@ -52,7 +51,7 @@ body {
 }
 
 .nav {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .nav a {
@@ -68,13 +67,14 @@ body {
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  
 }
 
 .social-icons a {
   width: 30px;
   color: #007f3f;
-  font-size: 30px;
+  font-size: 35px;
   transition: color 0.3s;
 }
 
@@ -82,7 +82,7 @@ body {
   color: #005f2f;
 }
 
-/* Sobre */
+/* SOBRE MIM */
 .sobre .container {
   display: flex;
   background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
@@ -119,7 +119,8 @@ body {
 .whatsapp-btn {
   margin-top: 25px;
   display: inline-block;
-  background-color: #1f3c44; /* azul escuro */
+  background-color: #1f3c44;
+  /* azul escuro */
   color: #fff;
   font-weight: 600;
   padding: 0.8rem 1.2rem;
@@ -135,9 +136,11 @@ body {
 }
 
 .whatsapp-btn:hover {
-  background-color: #29545e; /* cor mais escura */
+  background-color: #29545e;
+  /* cor mais escura */
   transform: scale(1.06);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* sombra mais forte no hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  /* sombra mais forte no hover */
 }
 
 .btn-container {
@@ -147,15 +150,30 @@ body {
 }
 
 
+@keyframes subir-suave {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 
+  /* animação suave */
+  animation: subir-suave 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0; /* começa invisível */
+}
 
+/* PROPOSITO */
 
-
-
-
-/* Missao */
-/* Hero */
 .hero {
   display: flex;
   align-items: center;
@@ -230,8 +248,79 @@ body {
   margin: 1rem auto 0 auto;
   /* 1rem de margem em cima, centralizado horizontalmente */
 }
+/* Animação vinda da esquerda */
+@keyframes entrar-esquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-/* clinica */
+/* Animação vinda da direita */
+@keyframes entrar-direita {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplica a animação aos textos */
+.hero-texto h1,
+.hero-texto p,
+.hero-texto .btn {
+  opacity: 0;
+  animation: entrar-esquerda 0.8s ease-out forwards;
+}
+
+.hero-texto h1 {
+  animation-delay: 0.2s;
+}
+
+.hero-texto p {
+  animation-delay: 0.4s;
+}
+
+.hero-texto .btn {
+  animation-delay: 0.6s;
+}
+
+/* Aplica a animação à imagem */
+.hero-img img {
+  opacity: 0;
+  animation: entrar-direita 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+/* ESTADO INICIAL (invisível e fora do lugar) */
+.proposito-section .hero-texto,
+.proposito-section .hero-img {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s ease;
+}
+
+/* Texto vem da esquerda */
+.proposito-section.active .hero-texto {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Imagem vem da direita */
+.proposito-section.active .hero-img {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s; /* leve atraso pra imagem */
+}
+
+/* CLINICA + NUTRICAO FUNCIONAL + CITACAO */
 
 .clinica {
   background-color: #f5f9f5;
@@ -294,7 +383,6 @@ ul {
   /* centraliza horizontalmente */
 }
 
-
 .box p {
   text-align: justify;
 }
@@ -326,16 +414,15 @@ ul {
   }
 }
 
+/* SERVICOS */
 
-
-
-/* Serviços */
 .servicos {
-  /*background-color: #f1f8e9;*/
+  background-color: #f1f8e9;
   padding: 4rem 0;
 }
 
 .servicos h2 {
+  height: 450px;
   text-align: center;
   color: #2e7d32;
   margin-bottom: 3rem;
@@ -369,7 +456,7 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-/* Depoimentos */
+/* DEPOIMENTOS */
 
 .depoimentos {
   padding: 4rem 0;
@@ -461,10 +548,16 @@ cite {
 }
 
 
+.depoimentos {
+  animation: entrar-direita 1s ease-out forwards;
+}
 
 
 
-/* Contato */
+
+
+/* FORMULARIO CONTATO */
+
 .contato {
   padding: 4rem 0;
   background-color: #fff;
@@ -504,7 +597,8 @@ form button:hover {
   background-color: #1b5e20;
 }
 
-/* Footer */
+/* RODAPE FOOTER */
+
 .footer {
   background-color: #66bb6a;
   color: white;
@@ -533,6 +627,7 @@ footer p {
   color: #0e0101;
 }
 
+/* WHATSAPP FIXO */
 
 .whatsapp-fixo {
   position: fixed;
@@ -563,4 +658,25 @@ footer p {
 .whatsapp-fixo:hover {
   transform: scale(1.1);
   background-color: #20ba5a;
+}
+
+/* Animação de entrada */
+@keyframes subir-whats {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicando a animação ao botão */
+.whatsapp-fixo {
+  /* ... seu CSS já existente ... */
+
+  opacity: 0; /* começa invisível */
+  animation: subir-whats 0.7s ease-out forwards;
+  animation-delay: 1.0s; /* meio segundo de atraso */
+}

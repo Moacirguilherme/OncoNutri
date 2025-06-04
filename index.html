@@ -11,13 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
 </head>
-
-
 
 <body>
 
-  <!-- CABECALHO -->
+  <!-- HEADER -->
 
   <header class="header">
     <div class="container">
@@ -49,7 +48,7 @@
     <div class="container">
       <img src="./assets/nutrisorrindo.jpg" alt="Nutricionista sorrindo">
       <div class="sobre-texto">
-        <h1>Sobre mim:</h1>
+        <h1>Sobre mim:</h1><br>
         <p>Olá, sou Márcia Noernberg, Nutricionista Clínica Funcional em Oncologia.
           <br>Meu compromisso é proporcionar um acompanhamento personalizado e humanizado,
           ajudando cada paciente a fortalecer seu organismo, melhorar a resposta ao tratamento e
@@ -63,28 +62,26 @@
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- MISSAO -->
-
-  <section id="proposito" class="hero">
+  <!-- PROPOSITO -->
+  <section id="proposito" class="hero proposito-section">
     <div class="container">
       <div class="hero-texto">
-        <h1>Propósito</h1>
-        <p>"Promover saúde e esperança através da nutrição e da mudança de estilo de vida, ajudando
+
+        <h1 class="animar-esquerda">Propósito</h1>
+        <p class="animar-esquerda">"Promover saúde e esperança através da nutrição e da mudança de estilo de vida,
+          ajudando
           cada paciente a enfrentar o câncer com mais força, equilíbrio e vitalidade positiva."</p>
-        <a href="https://wa.me/5542999487801" target="_blank" aria-label="WhatsApp" class="btn">Falar com a Nutri</a>
+        <a href="https://wa.me/5542999487801" class="btn animar-esquerda" target="_blank">Falar com a Nutri</a>
       </div>
       <div class="hero-img">
-        <img src="./assets/nutricomopaciente.jpg" alt="Nutricionista atendendo paciente">
+        <img src="./assets/nutricomopaciente.jpg" alt="Nutricionista atendendo paciente" class="animar-direita">
       </div>
     </div>
   </section>
 
-
-
-
+    <!-- CLINICA + NUTRICAO FUNCIONAL -->
 
   <section class="clinica">
     <div class="container-clinica">
@@ -104,7 +101,8 @@
         <h2>Nutrição Funcional em Oncologia</h2>
         <h3>O QUE É?</h3>
         <ul>
-          <li>A Nutrição Funcional em Oncologia adapta a alimentação para melhorar a resposta ao tratamento e a qualidade de vida.
+          <li>A Nutrição Funcional em Oncologia adapta a alimentação para melhorar a resposta ao tratamento e a
+            qualidade de vida.
             Foca na redução de efeitos colaterais e fortalecimento do organismo.
             Cada plano alimentar é personalizado conforme o tipo de câncer e o momento do tratamento.
             Considera saúde intestinal, inflamações, carências nutricionais e interações com medicamentos.
@@ -114,6 +112,7 @@
         </ul>
       </div>
 
+      <!-- CITACAO -->
 
       <div class="quote-box">
         <blockquote>
@@ -123,6 +122,7 @@
         </blockquote>
       </div>
   </section>
+
   <!-- NOSSOS SERVICOS EXCLUIDOS
 
       <div class="box">
@@ -144,8 +144,9 @@
         <p><strong>Segurança:</strong> Utiliza plataformas protegidas para garantir a privacidade e o sigilo
           profissional.</p>
       </div>
-    </div>
-   -->
+    </div> -->
+
+  <!-- NOSSOS SERVICOS -->
 
   <section id="servicos" class="servicos">
     <div class="container">
@@ -186,12 +187,15 @@
     </div>
   </section>
 
+  <!-- DEPOIMENTOS -->
+
   <section id="depoimentos" class="depoimentos">
     <div class="container">
       <h2>Depoimentos</h2>
 
+      <!-- SLIDES DEPOIMENTOS -->
+
       <div class="carrossel">
-        <!-- Slides -->
         <div class="slide ativo">
           <div class="comentario">
             <div class="estrelas">★★★★★</div>
@@ -227,23 +231,27 @@
     </div>
   </section>
 
+
+  <!-- FORMULARIO CONTATO -->
+
   <section id="contato" class="contato">
     <div class="container">
       <h2>Entre em contato</h2>
       <form action="https://formsubmit.co/marcia0904@hotmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nova mensagem do site!">
         <input type="hidden" name="_captcha" value="false">
-      
+
         <input type="text" name="nome" placeholder="Seu Nome" required>
         <input type="tel" name="telefone" id="telefone" placeholder="Seu Telefone" required pattern="[0-9]{10,11}">
         <input type="email" name="email" placeholder="Seu E-mail" required>
         <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-      
+
         <button type="submit">Enviar</button>
       </form>
     </div>
   </section>
 
+  <!-- LOCALIZACAO MAPS -->
 
   <section id="localizacao" style="padding: 60px 20px; background-color: #f7f7f7;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
@@ -259,10 +267,7 @@
     </div>
   </section>
 
-
-
-
-  <!-- RODAPE -->
+  <!-- RODAPE FOOTER -->
 
   <footer class="footer">
     <div class="footer-container">
@@ -278,9 +283,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- WHATSAPP FIXO -->
+
   <a href="https://wa.me/5542999487801" class="whatsapp-fixo" target="_blank" aria-label="Fale no WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <i class="fab fa-whatsapp"></i></a>
+
   <script src="./script.js"></script>
 </body>
 

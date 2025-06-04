@@ -31,3 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
     inputTelefone.value = inputTelefone.value.replace(/[^0-9]/g, "");
   });
 });
+
+
+const section = document.querySelector('.proposito-section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target); // roda só uma vez
+    }
+  });
+}, {
+  threshold: 0.2 // quando 20% da section estiver visível
+});
+
+observer.observe(section);
+
+
