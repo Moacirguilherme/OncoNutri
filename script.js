@@ -33,19 +33,41 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const section = document.querySelector('.proposito-section');
+const sections = document.querySelectorAll('.proposito-section, .depoimentos');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active');
-      observer.unobserve(entry.target); // roda só uma vez
+      observer.unobserve(entry.target);
     }
   });
 }, {
-  threshold: 0.2 // quando 20% da section estiver visível
+  threshold: 0.2
 });
 
-observer.observe(section);
+sections.forEach(section => {
+  observer.observe(section);
+});
 
 
+
+
+  const cardsServico = document.querySelectorAll('.card-servico');
+
+  const observerCards = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cardsServico.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('active');
+          }, i * 200);
+        });
+        observerCards.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cardsServico.forEach(card => observerCards.observe(card));
