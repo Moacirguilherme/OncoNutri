@@ -734,6 +734,11 @@ footer p {
 .footer-social a {
   color: #0e0101;
 }
+.footer hr {
+  border: none;
+  border-top: 1px solid #ffffff66; /* branco com transparência */
+  margin: 1rem auto;
+  width: 80%;
 
 /* WHATSAPP FIXO */
 
