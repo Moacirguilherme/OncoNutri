@@ -410,8 +410,34 @@ ul {
   }
 
   .img-nutri {
-    margin: 0 auto 15px;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+     }
+  
+}
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+
+.quote-box {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease-out;
 }
 
 /* SERVICOS */
@@ -500,9 +526,14 @@ ul {
   transform: translateY(0);
 }
 
+.card-servico {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-
-
+.card-servico.active:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
 
 /* DEPOIMENTOS */
 
@@ -549,7 +580,7 @@ ul {
 }
 
 .comentario {
-  /*background-color: #ffffff;*/
+  background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

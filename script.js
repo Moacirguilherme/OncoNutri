@@ -71,3 +71,23 @@ sections.forEach(section => {
   });
 
   cardsServico.forEach(card => observerCards.observe(card));
+
+
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementosParaAnimar = document.querySelectorAll(".box, .quote-box");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-left");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2,
+    });
+
+    elementosParaAnimar.forEach(el => observer.observe(el));
+  });
+
