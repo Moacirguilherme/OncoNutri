@@ -725,14 +725,14 @@ form button:hover {
 /* RODAPE FOOTER */
 
 .footer {
-  background-color: #2e7d32; /* verde mais escuro */
   color: #fff;
   padding: 2rem 1rem;
   margin-top: 5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0D1E11
 }
 
-.footer-content {
+.footer-content {  
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -740,6 +740,7 @@ form button:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+  background-color: #0D1E11
 }
 
 .logo-footer {
@@ -751,6 +752,7 @@ form button:hover {
   height: auto;
   border-radius: 80px 0 80px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  
 }
 
 .footer-info {
@@ -761,13 +763,13 @@ form button:hover {
 .footer-info p {
   margin: 4px 0;
   font-size: 0.9rem;
-  color: #f1f1f1;
+  color: #D4AF37;
 }
 
 .footer-info .dev {
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: #c8e6c9;
+  color: #D4AF37;
 }
 
 .footer-social {
@@ -782,7 +784,7 @@ form button:hover {
 }
 
 .footer-social a:hover {
-  color: #a5d6a7;
+  color: #D4AF37;
 }
 
 .footer hr {
