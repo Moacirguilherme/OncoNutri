@@ -725,38 +725,94 @@ form button:hover {
 /* RODAPE FOOTER */
 
 .footer {
-  background-color: #66bb6a;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 5rem;
-  text-decoration: none;
-  margin: 0;
-}
-
-footer p {
-  text-align: center;
-  font-size: 0.875rem;
+  background-color: #2e7d32; /* verde mais escuro */
   color: #fff;
-  /* deixa os textos do footer sempre brancos */
-  margin: 4px 0;
+  padding: 2rem 1rem;
+  margin-top: 5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-  color: #e0f2f1;
-  /* tom suave no hover */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-footer {
+  flex: 1 1 200px;
+}
+
+.logo-footer img.logo {
+  max-width: 160px;
+  height: auto;
+  border-radius: 80px 0 80px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.footer-info {
+  flex: 2 1 300px;
+  text-align: left;
+}
+
+.footer-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+.footer-info .dev {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #c8e6c9;
+}
+
+.footer-social {
+  margin-top: 1rem;
 }
 
 .footer-social a {
-  color: #0e0101;
+  margin-right: 12px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
+
+.footer-social a:hover {
+  color: #a5d6a7;
+}
+
 .footer hr {
   border: none;
-  border-top: 1px solid #ffffff66; /* branco com transparência */
-  margin: 1rem auto;
-  width: 80%;
+  height: 1px;
+  width: 60%; /* largura menor */
+  margin-left: 0; /* gruda na esquerda */
+  margin-top: 1rem;
+  margin-bottom: 0.05rem;
+  background: linear-gradient(to right, #ffffffcc, #ffffff66, #ffffff00);
 }
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
 /* WHATSAPP FIXO */
 
 .whatsapp-fixo {
