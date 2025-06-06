@@ -31,11 +31,21 @@ body {
 /* HEADER */
 .header {
   /*background: linear-gradient(135deg, #FFF3E0, #FFE0B2);*/
+  background-color: #0D1E11;
   /* cor de fundo suave (opcional) */
   padding: 20px 40px;
 }
 
-.container {
+.container-header {
+  /*background: linear-gradient(135deg, #FFF3E0, #FFE0B2);*/
+  background-color: #0D1E11;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container{
   background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
   display: flex;
   align-items: center;
@@ -59,7 +69,8 @@ body {
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  color: #007f3f;
+  /*color: #007f3f;*/
+  color: #D4AF37;
 }
 
 .nav a:hover {
@@ -74,7 +85,8 @@ body {
 
 .social-icons a {
   width: 30px;
-  color: #007f3f;
+  /*color: #007f3f;*/
+  color: #D4AF37;
   font-size: 35px;
   transition: color 0.3s;
 }
@@ -84,6 +96,7 @@ body {
 }
 
 /* SOBRE MIM */
+
 .sobre .container {
   display: flex;
   background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
@@ -107,7 +120,7 @@ body {
   flex: 1;
 }
 
-.sobre h2 {
+.sobre h1 {
   color: #00695c;
   margin-bottom: 1rem;
 }
@@ -251,6 +264,7 @@ body {
   margin: 1rem auto 0 auto;
   /* 1rem de margem em cima, centralizado horizontalmente */
 }
+
 /* Animação vinda da esquerda */
 @keyframes entrar-esquerda {
   from {
@@ -388,12 +402,15 @@ ul {
 
 .box p {
   text-align: justify;
-}
+  }
+  .quote-box p {
+    font-size: 1.2rem;
+  }
 
 .quote-box cite {
   display: block;
   margin-top: 15px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-style: normal;
 }
 
@@ -445,8 +462,8 @@ ul {
 
 /* SERVICOS */
 
-.servicos {
-  background-color: #f1f8e9;
+.servicos-section {
+  background-color: #e8f5e9;
   padding: 4rem 0;
 }
 
@@ -739,7 +756,7 @@ footer p {
   border-top: 1px solid #ffffff66; /* branco com transparência */
   margin: 1rem auto;
   width: 80%;
-
+}
 /* WHATSAPP FIXO */
 
 .whatsapp-fixo {
