@@ -23,30 +23,25 @@ body {
 }
 
 .container {
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
 /* HEADER */
+
 .header {
-  /*background: linear-gradient(135deg, #FFF3E0, #FFE0B2);*/
   background-color: #0D1E11;
-  /* cor de fundo suave (opcional) */
+  /* Fundo escuro */
   padding: 20px 40px;
 }
 
 .container-header {
-  /*background: linear-gradient(135deg, #FFF3E0, #FFE0B2);*/
   background-color: #0D1E11;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.container{
-  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,12 +50,12 @@ body {
 }
 
 .logo {
-  border-radius: 50px 0;
-  font-size: 1990px;
+  border-radius: 80px 0 80px;
   width: 220px;
   height: auto;
 }
 
+/* Navegação principal */
 .nav {
   font-size: 24px;
 }
@@ -69,23 +64,22 @@ body {
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  /*color: #007f3f;*/
   color: #D4AF37;
+  /* Dourado */
 }
 
 .nav a:hover {
   text-decoration: underline;
 }
 
+/* Ícones sociais */
 .social-icons {
   display: flex;
   gap: 20px;
-  
 }
 
 .social-icons a {
   width: 30px;
-  /*color: #007f3f;*/
   color: #D4AF37;
   font-size: 35px;
   transition: color 0.3s;
@@ -95,20 +89,24 @@ body {
   color: #005f2f;
 }
 
-/* SOBRE MIM */
+/* ====== SECTION: SOBRE MIM ====== */
 
 .sobre .container {
   display: flex;
-  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
+  flex-wrap: wrap;
+  gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-  /* Para ajustar em telas menores */
+  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
+  padding: 2rem;
 }
-.sobre{
+
+/* Cor de fundo da section (fallback caso container não cubra tudo) */
+.sobre {
   background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
 }
+
+/* Imagem da nutricionista */
 .sobre img {
   max-width: 400px;
   width: 100%;
@@ -120,6 +118,7 @@ body {
   flex: 1;
 }
 
+/* Título */
 .sobre h1 {
   color: #00695c;
   margin-bottom: 1rem;
@@ -132,9 +131,19 @@ body {
   text-align: justify;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  animation: subir-suave 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  /* começa invisível */
+}
+
 .whatsapp-btn {
-  margin-top: 25px;
   display: inline-block;
+  margin-top: 25px;
   background-color: #1f3c44;
   /* azul escuro */
   color: #fff;
@@ -156,39 +165,21 @@ body {
   /* cor mais escura */
   transform: scale(1.06);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  /* sombra mais forte no hover */
 }
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
 
 @keyframes subir-suave {
   from {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-
-  /* animação suave */
-  animation: subir-suave 1s ease forwards;
-  animation-delay: 0.3s;
-  opacity: 0; /* começa invisível */
-}
-
-/* PROPOSITO */
+/* ====== SECTION: PROPOSITO ====== */
 
 .hero {
   display: flex;
@@ -230,14 +221,6 @@ body {
   background-color: #1b5e20;
 }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  /* Espaça o texto e a imagem */
-  align-items: center;
-  /* Alinha os itens verticalmente no centro */
-}
-
 .hero-texto {
   max-width: 50%;
   /* Limita a largura do texto, para que ele não ocupe toda a largura */
@@ -271,6 +254,7 @@ body {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -283,6 +267,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -334,17 +319,18 @@ body {
 .proposito-section.active .hero-img {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 0.2s; /* leve atraso pra imagem */
+  transition-delay: 0.2s;
+  /* leve atraso pra imagem */
 }
 
-/* CLINICA + NUTRICAO FUNCIONAL + CITACAO */
+/* ====== SECTION: NUTRICAO FUNCIONAL ====== */
 
-.clinica {
+.nutricao-funcional {
   background-color: #f5f9f5;
   padding: 60px 20px;
 }
 
-.container-clinica {
+.container-nutricao-funcional {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -402,10 +388,11 @@ ul {
 
 .box p {
   text-align: justify;
-  }
-  .quote-box p {
-    font-size: 1.2rem;
-  }
+}
+
+.quote-box p {
+  font-size: 1.2rem;
+}
 
 .quote-box cite {
   display: block;
@@ -414,8 +401,34 @@ ul {
   font-style: normal;
 }
 
+/* ========== ANIMAÇÕES ========== */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.quote-box {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease-out;
+}
+
+/* ========== RESPONSIVO ========== */
+
 @media (min-width: 768px) {
-  .container-clinica {
+  .container-nutricao-funcional {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -433,73 +446,15 @@ ul {
     width: 100%;
     max-width: 550px;
     height: 100%;
-     }
-  
-}
-
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+
 }
 
-.animate-left {
-  animation: slideInLeft 1s ease-out forwards;
-}
-
-
-.quote-box {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 0.5s ease-out;
-}
-
-/* SERVICOS */
+/* ========== SEÇÃO SERVIÇOS ========== */
 
 .servicos-section {
   background-color: #e8f5e9;
   padding: 4rem 0;
-}
-
-.servicos h2 {
-  height: 450px;
-  text-align: center;
-  color: #2e7d32;
-  margin-bottom: 3rem;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  width: 2500px;
-}
-
-.card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  width: 300px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  color: #2e7d32;
-  margin-bottom: 0.5rem;
 }
 
 .cards-servicos {
@@ -507,8 +462,10 @@ ul {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
- 
+
 }
+
+/* ========== CARDS DE SERVIÇO ========== */
 
 .card-servico {
   background-color: #fff;
@@ -534,6 +491,8 @@ ul {
   color: #2e7d32;
   font-weight: bold;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .card-servico p {
@@ -541,12 +500,11 @@ ul {
   line-height: 1.5;
 }
 
+/* ========== ANIMAÇÃO AO APARECER E HOVER ========== */
+
 .card-servico.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-.card-servico {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -555,7 +513,7 @@ ul {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* DEPOIMENTOS */
+/* ========== SEÇÃO DEPOIMENTOS ========== */
 
 .depoimentos {
   padding: 4rem 0;
@@ -567,6 +525,8 @@ ul {
   color: #00695c;
   margin-bottom: 2rem;
 }
+
+/* ========== CARROSSEL DE DEPOIMENTOS ========== */
 
 .carrossel {
   position: relative;
@@ -589,8 +549,7 @@ ul {
   gap: 2rem;
   flex-wrap: wrap;
   pointer-events: none;
-  /* impede clique no slide oculto */
-}
+  }
 
 .slide.ativo {
   opacity: 1;
@@ -598,6 +557,8 @@ ul {
   position: relative;
   pointer-events: all;
 }
+
+/* ========== CARTÃO DE COMENTÁRIO ========== */
 
 .comentario {
   background-color: #ffffff;
@@ -609,7 +570,7 @@ ul {
 }
 
 .estrelas {
-  color: #fdd835;
+  color: #B8860B;
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
@@ -625,6 +586,8 @@ cite {
   font-weight: bold;
   color: #004d40;
 }
+
+/* ========== BOTOES DE NAVEGACAO ========== */
 
 .prev,
 .next {
@@ -646,12 +609,14 @@ cite {
   right: 0;
 }
 
+/* ========== ANIMAÇÃO DE ENTRADA ========== */
 
 @keyframes entrar-direita {
   from {
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -662,10 +627,8 @@ cite {
   animation: entrar-direita 1s ease-out forwards;
 }
 
+/* ======= FORMULÁRIO DE CONTATO - LAYOUT GERAL ========= */
 
-
-
-/* FORMULARIO CONTATO */
 .container-contato {
   display: flex;
   justify-content: center;
@@ -680,10 +643,13 @@ cite {
   background-color: #edf2f4;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 600px; /* Aumentei de 600px para 800px */
+  max-width: 600px;
+  /* Aumentei de 600px para 800px */
 }
+
+/* ======= FORMULÁRIO CAMPOS E ESTILOS ======= */
 
 form {
   display: flex;
@@ -722,7 +688,7 @@ form button:hover {
 }
 
 
-/* RODAPE FOOTER */
+/* ========= RODAPE FOOTER ============ */
 
 .footer {
   color: #fff;
@@ -732,7 +698,7 @@ form button:hover {
   background-color: #0D1E11
 }
 
-.footer-content {  
+.footer-content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -751,8 +717,8 @@ form button:hover {
   max-width: 160px;
   height: auto;
   border-radius: 80px 0 80px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
 }
 
 .footer-info {
@@ -787,18 +753,21 @@ form button:hover {
   color: #D4AF37;
 }
 
+/* Linha de separação */
+
 .footer hr {
   border: none;
   height: 1px;
-  width: 60%; /* largura menor */
-  margin-left: 0; /* gruda na esquerda */
+  width: 60%;
+  margin-left: 0;
   margin-top: 1rem;
   margin-bottom: 0.05rem;
   background: linear-gradient(to right, #ffffffcc, #ffffff66, #ffffff00);
 }
 
 
-/* Responsivo */
+/* RESPONSIVO: rodapé empilhado em telas menores */
+
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -815,7 +784,7 @@ form button:hover {
   }
 }
 
-/* WHATSAPP FIXO */
+/* ==== BOTÃO FIXO DO WHATSAPP ==== */
 
 .whatsapp-fixo {
   position: fixed;
@@ -848,12 +817,14 @@ form button:hover {
   background-color: #20ba5a;
 }
 
-/* Animação de entrada */
+/* Animação de entrada: botão "sobe" suavemente ao aparecer */
+
 @keyframes subir-whats {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -862,9 +833,7 @@ form button:hover {
 
 /* Aplicando a animação ao botão */
 .whatsapp-fixo {
-  /* ... seu CSS já existente ... */
-
-  opacity: 0; /* começa invisível */
+  opacity: 0;
   animation: subir-whats 0.7s ease-out forwards;
-  animation-delay: 1.0s; /* meio segundo de atraso */
-}
+  animation-delay: 1.0s;
+  }

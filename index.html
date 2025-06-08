@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutricionista</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="./assets/logonutri.jpeg">
+  <link rel="icon" type="image/png" href="./assets/logonutri2.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  </head>
+</head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER PRINCIPAL MENU DE NAVEGACAO E REDES SOCIAS-->
 
   <header class="header">
     <div class="container-header">
-      <img src="./assets/logonutri.jpeg" alt="Logo Nutricionista" class="logo">
+      <img src="./assets/logonutri3.jpeg" alt="Logo Nutricionista" class="logo">
       <nav class="nav">
         <a href="#sobre">Sobre</a>
         <a href="#proposito">Propósito</a>
@@ -31,10 +31,10 @@
         <a href="https://wa.me/5542999487801" target="_blank" aria-label="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://www.instagram.com/onconutrimarcia/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/nutrimarcia.noernberg/" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com/marciaregina.noernberg" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/nutrimarcia.noernberg" target="_blank" aria-label="Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </div>
@@ -46,23 +46,31 @@
   <section id="sobre" class="sobre">
     <div class="container">
       <img src="./assets/nutrisorrindo.jpg" alt="Nutricionista sorrindo">
+
+      <!-- Texto descritivo da profissional -->
       <div class="sobre-texto">
         <h1>Sobre mim:</h1><br>
-        <p>Olá, sou Márcia Noernberg, Nutricionista Clínica Funcional em Oncologia.
+        <p>
+          Olá, sou Márcia Noernberg, Nutricionista Clínica Funcional em Oncologia.
           <br>Meu compromisso é proporcionar um acompanhamento personalizado e humanizado,
           ajudando cada paciente a fortalecer seu organismo, melhorar a resposta ao tratamento e
           promover bem-estar por meio da alimentação equilibrada e estratégica.
           <br>A nutrição pode ser uma grande aliada na sua jornada.
         </p>
+
+        <!-- Botão de contato via WhatsApp -->
         <div class="btn-container">
           <a href="https://wa.me/5542988694890" target="_blank" class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i> Agende seu atendimento</a>
+            <i class="fab fa-whatsapp"></i> Agende seu atendimento
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- PROPOSITO -->
+
   <section id="proposito" class="hero proposito-section">
     <div class="container">
       <div class="hero-texto">
@@ -81,10 +89,10 @@
   </section>
 
 
-  <!-- CLINICA + NUTRICAO FUNCIONAL -->
+  <!-- NUTRICAO FUNCIONAL -->
 
-  <section class="clinica">
-    <div class="container-clinica">
+  <section class="nutricao-funcional">
+    <div class="container-nutricao-funcional">
       <div class="box">
         <h1>Nutrição Funcional em Oncologia</h1>
         <h2>O que é ?</h2>
@@ -100,18 +108,7 @@
       </div>
       <div class="box">
         <img src="./assets/nutricaooncologica.jpg" alt="Nutricionista" class="img-nutri">
-        <!-- CLINICA + NUTRICAO FUNCIONAL<h2>Nutrição Funcional em Oncologia</h2>
-        <h3>O QUE É?</h3>
-        <ul>
-          <li>A Nutrição Funcional em Oncologia adapta a alimentação para melhorar a resposta ao tratamento e a
-            qualidade de vida.
-            Foca na redução de efeitos colaterais e fortalecimento do organismo.
-            Cada plano alimentar é personalizado conforme o tipo de câncer e o momento do tratamento.
-            Considera saúde intestinal, inflamações, carências nutricionais e interações com medicamentos.
-            Avalia o impacto dos alimentos no corpo de forma individualizada.
-            É uma abordagem integrativa, precisa e centrada no paciente.
-            Nutrição como aliada no cuidado oncológico.</li>
-        </ul> -->
+        </ul>
       </div>
 
       <!-- CITACAO -->
@@ -199,13 +196,20 @@
   </section>
 
 
-  <!-- FORMULARIO CONTATO -->
+
+  <!-- SEÇÃO DE CONTATO / FORMULÁRIO -->
+  <!-- Usuário pode enviar nome, e-mail, telefone e mensagem -->
+  <!-- Os dados são enviados via FormSubmit para o e-mail da nutricionista -->
 
   <section id="contato" class="contato">
     <div class="container-contato">
       <h2>Entre em contato</h2>
+
+      <!-- Caixa de formulário com título e campos -->
       <div class="form-box">
         <h2>Envie sua Mensagem.</h2>
+
+        <!-- Ação conectada ao FormSubmit (evita backend) -->
         <form action="https://formsubmit.co/marcia0904@hotmail.com" method="POST">
           <input type="hidden" name="_subject" value="Nova mensagem do site!">
           <input type="hidden" name="_captcha" value="false">
@@ -222,14 +226,15 @@
           <label for="mensagem">Mensagem</label>
           <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
 
+          <!-- Botão de envio -->
           <button type="submit">Enviar Mensagem</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- LOCALIZACAO MAPS -->
-
+  <!-- SEÇÃO DE LOCALIZAÇÃO COM GOOGLE MAPS -->
+  
   <section id="localizacao" style="padding: 60px 20px; background-color: #f7f7f7;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       <h2 style="font-size: 2rem; margin-bottom: 20px;">Onde estamos</h2>
@@ -246,33 +251,34 @@
 
   <!-- RODAPE FOOTER -->
 
-<!-- RODAPÉ FOOTER -->
-<footer class="footer">
-  <div class="footer-content">
-    <div class="logo-footer">
-      <img src="./assets/logonutri3.jpeg" alt="Logo Nutricionista" class="logo">
-    </div>
+  <!-- RODAPÉ FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo-footer">
+        <img src="./assets/logonutri3.jpeg" alt="Logo Nutricionista" class="logo">
+      </div>
 
-    <div class="footer-info">
-      <p>&copy; 2025 Onconutri Funcional® Nutrição e Saúde</p>
-      <p>CNPJ: 60.841.767/0001-75</p>
-      <p><i class="fas fa-id-card"></i> CRN: 10 13273 - CREF 047436-G/PR</p>
-      <p>Todos os direitos reservados.</p>
-<hr>
-      <p class="dev">Desenvolvido por Moacir Guilherme Tabisz</p>
-      <div class="footer-social">
-        <a href="https://wa.me/5542988694890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/moacirtabisz/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/moacir.guilherme.3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <div class="footer-info">
+        <p>&copy; 2025 Onconutri Funcional® Nutrição e Saúde</p>
+        <p>CNPJ: 60.841.767/0001-75</p>
+        <p><i class="fas fa-id-card"></i> CRN: 10 13273 - CREF 047436-G/PR</p>
+        <p>Todos os direitos reservados.</p>
+        <hr>
+        <p class="dev">Desenvolvido por Moacir Guilherme Tabisz</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5542988694890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/moacirtabisz/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/moacir.guilherme.3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- WHATSAPP FIXO -->
 
   <a href="https://wa.me/5542999487801" class="whatsapp-fixo" target="_blank" aria-label="Fale no WhatsApp">
-    <i class="fab fa-whatsapp"></i></a>
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script src="./script.js"></script>
 </body>

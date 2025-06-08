@@ -1,3 +1,11 @@
+/**
+ * Carrossel de Depoimentos
+ * -------------------------
+ * Este script implementa a navegação entre slides de depoimentos usando botões "anterior" e "próximo".
+ * A classe 'ativo' é usada para exibir o slide atual.
+ * Quando o DOM estiver completamente carregado, o primeiro slide é mostrado por padrão.
+ */
+
 document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.slide');
   const prev = document.querySelector('.prev');
@@ -51,7 +59,7 @@ sections.forEach(section => {
 });
 
 
-
+// Animação dos cards de serviço ao entrar na tela
 
   const cardsServico = document.querySelectorAll('.card-servico');
 
