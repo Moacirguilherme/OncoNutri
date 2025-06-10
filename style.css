@@ -179,6 +179,32 @@ body {
   }
 }
 
+
+
+/*complemento nova alterarção */
+
+.sobre-texto ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.sobre-texto ul li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.sobre-texto ul li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #00695c;
+}
+
+
+
 /* ====== SECTION: PROPOSITO ====== */
 
 .hero {
@@ -343,7 +369,7 @@ body {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-}
+  }
 
 .img-nutri {
   width: 100%;
@@ -381,10 +407,8 @@ ul {
   text-align: center;
   font-style: italic;
   max-width: 800px;
-  /* controla a largura máxima */
   margin: 2rem auto;
-  /* centraliza horizontalmente */
-}
+ }
 
 .box p {
   text-align: justify;
@@ -423,31 +447,6 @@ ul {
   opacity: 0;
   transform: translateX(-100px);
   transition: all 0.5s ease-out;
-}
-
-/* ========== RESPONSIVO ========== */
-
-@media (min-width: 768px) {
-  .container-nutricao-funcional {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .box {
-    flex: 1 1 45%;
-  }
-
-  .quote-box {
-    flex: 1 1 100%;
-  }
-
-  .img-nutri {
-    width: 100%;
-    max-width: 550px;
-    height: 100%;
-  }
-
 }
 
 /* ========== SEÇÃO SERVIÇOS ========== */
@@ -883,13 +882,8 @@ form button:hover {
     font-size: 20px;
   }
 
-  .sobre,
-  .nutricao-funcional,
-  .contato,
-  .mapas,
-  .footer  {
+  .sobre {
     align-items: center;
-    order: 4;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -897,14 +891,10 @@ form button:hover {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    align-items: center;
-  }
-
+     }
+ 
+  .sobre img
   
-  .sobre img,
-  .nutricao-funcional img,
-  .hero img,
-  .footer img
   {
     display: block;
     margin: 0 auto;
@@ -912,8 +902,70 @@ form button:hover {
     height: auto;
   }
 
-
   .nav.active {
     display: flex;
   }
+}
+
+
+
+
+
+
+
+
+/*nova section */
+
+/* SEÇÃO DESTAQUE - TÍTULO PRINCIPAL */
+.destaque {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.destaque h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.destaque p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* SEÇÃO IMAGEM + TEXTO */
+.imagem-texto {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.imagem-texto-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imagem-texto .texto {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.imagem-texto .imagem {
+  flex: 1;
+  text-align: center;
+}
+
+.imagem-texto .imagem img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
