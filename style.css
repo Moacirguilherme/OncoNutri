@@ -32,11 +32,10 @@ body {
   padding: 2rem;
 }
 
-/* HEADER */
+/* ====== HEADER CABECALHO ====== */
 
 .header {
   background-color: #0D1E11;
-  /* Fundo escuro */
   padding: 20px 40px;
 }
 
@@ -65,8 +64,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #D4AF37;
-  /* Dourado */
-}
+  }
 
 .nav a:hover {
   text-decoration: underline;
@@ -89,121 +87,87 @@ body {
   color: #005f2f;
 }
 
-/* ====== SECTION: SOBRE MIM ====== */
+/* ===== INICIO NUTRICAO ONCOLOGICA ===== */
 
-.sobre .container {
+.imagem-texto-section {
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem-texto-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
-  padding: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  padding: 0 20px;
 }
 
-/* Cor de fundo da section (fallback caso container não cubra tudo) */
-.sobre {
-  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
-}
-
-/* Imagem da nutricionista */
-.sobre img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 1rem;
-  flex-shrink: 0;
-}
-
-.sobre-texto {
+.imagem-texto-conteudo {
   flex: 1;
-}
-
-/* Título */
-.sobre h1 {
-  color: #00695c;
-  margin-bottom: 1rem;
-}
-
-.sobre p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
+  max-width: 600px;
   text-align: justify;
 }
 
-.btn-container {
+.imagem-texto-conteudo h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.imagem-texto-conteudo p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.imagem-texto-conteudo .btn {
+  display: block;
+  width: max-content;
+  margin: 1rem auto 0 auto;
+  background-color: #2e7d32;
+}
+
+.imagem-texto-conteudo .btn:hover {
+  background-color: #bf360c;
+}
+
+.imagem-texto-imagem {
+  flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  animation: subir-suave 1s ease forwards;
-  animation-delay: 0.3s;
+}
+
+.imagem-texto-imagem img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ANIMAÇÕES */
+.imagem-texto-section .imagem-texto-conteudo,
+.imagem-texto-section .imagem-texto-imagem {
   opacity: 0;
-  /* começa invisível */
+  transform: translateX(60px);
+  transition: all 1s ease;
 }
 
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 25px;
-  background-color: #1f3c44;
-  /* azul escuro */
-  color: #fff;
-  font-weight: 600;
-  padding: 0.8rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.imagem-texto-section.active .imagem-texto-conteudo {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.whatsapp-btn i {
-  margin-right: 8px;
+.imagem-texto-section.active .imagem-texto-imagem {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
 }
-
-.whatsapp-btn:hover {
-  background-color: #29545e;
-  /* cor mais escura */
-  transform: scale(1.06);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes subir-suave {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-/*complemento nova alterarção */
-
-.sobre-texto ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 1rem 0;
-}
-
-.sobre-texto ul li {
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-  color: #444;
-  display: flex;
-  align-items: center;
-}
-
-.sobre-texto ul li::before {
-  content: "✔️";
-  margin-right: 10px;
-  color: #00695c;
-}
-
-
 
 /* ====== SECTION: PROPOSITO ====== */
 
@@ -358,14 +322,18 @@ body {
 
 .container-nutricao-funcional {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* mudar de column para row */
+  align-items: center; /* opcional para alinhar verticalmente */
+  justify-content: space-between; /* opcional para distribuir o espaço */
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: justify;
+  flex-wrap: wrap; /* garante que funcione bem em telas menores */
 }
 
 .box {
+  flex: 1; /* divide o espaço entre texto e imagem */
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
@@ -373,11 +341,12 @@ body {
 
 .img-nutri {
   width: 100%;
-  max-width: 300px;
-  height: 250px;
+  max-width: 550px;
+  height: 100%;
   border-radius: 10px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 15px 0;
+
 }
 
 h2,
@@ -447,6 +416,119 @@ ul {
   opacity: 0;
   transform: translateX(-100px);
   transition: all 0.5s ease-out;
+}
+
+
+/* ====== SECTION: SOBRE MIM ====== */
+
+.sobre .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
+  padding: 2rem;
+}
+
+/* Cor de fundo da section (fallback caso container não cubra tudo) */
+.sobre {
+  background: linear-gradient(135deg, #F1F8E9, #FFF9C4);
+}
+
+/* Imagem da nutricionista */
+.sobre img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+/* Título */
+.sobre h1 {
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  animation: subir-suave 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  /* começa invisível */
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #1f3c44;
+  /* azul escuro */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #29545e;
+  /* cor mais escura */
+  transform: scale(1.06);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes subir-suave {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*complemento nova alterarção */
+
+.sobre-texto ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.sobre-texto ul li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.sobre-texto ul li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #00695c;
 }
 
 /* ========== SEÇÃO SERVIÇOS ========== */
@@ -645,8 +727,7 @@ cite {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 600px;
-  /* Aumentei de 600px para 800px */
-}
+  }
 
 /* ======= FORMULÁRIO CAMPOS E ESTILOS ======= */
 
@@ -764,25 +845,6 @@ form button:hover {
   background: linear-gradient(to right, #ffffffcc, #ffffff66, #ffffff00);
 }
 
-
-/* RESPONSIVO: rodapé empilhado em telas menores */
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-info {
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-}
-
 /* ==== BOTÃO FIXO DO WHATSAPP ==== */
 
 .whatsapp-fixo {
@@ -836,8 +898,6 @@ form button:hover {
   animation: subir-whats 0.7s ease-out forwards;
   animation-delay: 1.0s;
 }
-
-
 
 @media (max-width: 768px) {
   .container-header {
@@ -907,65 +967,24 @@ form button:hover {
   }
 }
 
+/* RESPONSIVO: rodapé empilhado em telas menores */
 
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .footer-info {
+    text-align: center;
+  }
 
-
-
-
-
-/*nova section */
-
-/* SEÇÃO DESTAQUE - TÍTULO PRINCIPAL */
-.destaque {
-  background-color: #f5f5f5;
-  padding: 80px 20px;
-  text-align: center;
+  .footer-social {
+    justify-content: center;
+  }
 }
 
-.destaque h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
 
-.destaque p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
 
-/* SEÇÃO IMAGEM + TEXTO */
-.imagem-texto {
-  background-color: #ffffff;
-  padding: 80px 20px;
-}
 
-.imagem-texto-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.imagem-texto .texto {
-  flex: 1;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.imagem-texto .imagem {
-  flex: 1;
-  text-align: center;
-}
-
-.imagem-texto .imagem img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}

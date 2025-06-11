@@ -41,7 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const sections = document.querySelectorAll('.proposito-section, .depoimentos');
+// ------------- ANIMACOES SECTIONS
+
+
+const sections = document.querySelectorAll('.proposito-section, .imagem-texto-section, .depoimentos');
+
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -100,9 +104,7 @@ sections.forEach(section => {
   });
 
 
-
-
-
+//--------- RESPOSIVO
 
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.querySelector(".nav");
@@ -110,3 +112,11 @@ sections.forEach(section => {
   menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
   });
+
+
+
+
+
+
+
+  
